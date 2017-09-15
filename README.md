@@ -11,12 +11,30 @@ $ python --version
 Python 3.6.2
 ```
 
-## Create virtual environment
+## Install Dependencies
+Install dependencies with ``pip```.
 
-Create a virtual environment. These keep your packages separate from your system libraries.
 
 ```
-$ python -m venv ./myvenv
-$ source ./myvenv/bin/activate
+pip install -r requirements.txt
 ```
 
+## Virtual Environment Kernel
+If you are using a virtualenv (highly recommended), you'll need to create a kernel specification to launch notebooks with it inside the Jupyter Notebook.
+
+
+  mkdir -p ~/kernelspecs/pytalk
+  jupyter kernelspec install ~/kernelspecs/pytalk --user
+
+
+Afterwards, you'll need to relaunch any running jupyter notebook servers. Your kernel containing all the packings installed within your virtualenv are now available.
+
+## Run the notebook
+Run the notebook with all access on a given port using
+
+```
+jupyter notebook
+
+```
+
+This will run the notebook.
